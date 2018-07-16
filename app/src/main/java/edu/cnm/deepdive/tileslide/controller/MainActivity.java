@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 import edu.cnm.deepdive.tileslide.R;
 import edu.cnm.deepdive.tileslide.model.Frame;
 import edu.cnm.deepdive.tileslide.view.FrameAdapter;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     // TODO Implement tile sliding by responding to clicks, and invoking any
     // relevant methods in the Frame class.
+    if(frame.move(position / PUZZLE_SIZE, position % PUZZLE_SIZE)) {
+      adapter.notifyDataSetChanged();
+    } else {
+      Toast.makeText(this,"try again", Toast.LENGTH_SHORT).show();
+    }
   }
 
   private void createPuzzle() {
