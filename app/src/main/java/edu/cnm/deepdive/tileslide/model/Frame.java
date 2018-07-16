@@ -2,6 +2,9 @@ package edu.cnm.deepdive.tileslide.model;
 
 import java.util.Random;
 
+/**
+ * Class that consists of the functions of the game.
+ */
 public class Frame {
 
   private int size;
@@ -10,6 +13,11 @@ public class Frame {
   private Tile[][] tiles;
   private int moves;
 
+  /**
+   *
+   * @param size indicates the size of the tiles in the game.
+   * @param rng creates randomness.
+   */
   public Frame(int size, Random rng) {
     this.size = size;
     this.rng = rng;
@@ -22,6 +30,10 @@ public class Frame {
     scramble();
   }
 
+  /**
+   * indicates that the reset method should set the moves back
+   * to zero and for the game to start over.
+   */
   public void reset() {
     copy(start, tiles);
     moves = 0;
@@ -36,6 +48,10 @@ public class Frame {
     moves = 0;
   }
 
+  /**
+   *
+   * @return
+   */
   public Tile[][] getTiles() {
     return tiles;
   }
