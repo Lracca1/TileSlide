@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-  private static int PUZZLE_SIZE = 3;
+  private static int PUZZLE_SIZE = 4;
 
   private Frame frame;
   private FrameAdapter adapter;
@@ -33,13 +33,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     // TODO Implement tile sliding by responding to clicks, and invoking any
     // relevant methods in the Frame class.
-    if(frame.move(position / PUZZLE_SIZE, position % PUZZLE_SIZE)) {
+    if (frame.move(position / PUZZLE_SIZE, position % PUZZLE_SIZE)) {
       adapter.notifyDataSetChanged();
     } else {
-      Toast.makeText(this,"try again", Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, "try again", Toast.LENGTH_SHORT).show();
     }
   }
-
   private void createPuzzle() {
     frame = new Frame(PUZZLE_SIZE, new Random());
     adapter = new FrameAdapter(this, frame);
