@@ -9,7 +9,7 @@
 
   <GridView
     android:id="@+id/tile_grid"
-    android:layout_width="0dp"
+    android:layout_width="295dp"
     android:layout_height="0dp"
     android:layout_margin="@dimen/layout_margin"
     android:padding="@dimen/cell_spacing"

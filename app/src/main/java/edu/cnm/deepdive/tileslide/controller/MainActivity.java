@@ -15,6 +15,12 @@ import edu.cnm.deepdive.tileslide.model.Frame;
 import edu.cnm.deepdive.tileslide.view.FrameAdapter;
 import java.util.Random;
 
+/**
+ * MainActivity class consist of creating the puzzle game.
+ *
+ * @author Lora Racca
+ * @version 1.0
+ */
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
   private static int PUZZLE_SIZE = 4;

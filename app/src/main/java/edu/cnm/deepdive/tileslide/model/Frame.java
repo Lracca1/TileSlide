@@ -39,6 +39,9 @@ public class Frame {
     moves = 0;
   }
 
+  /**
+   * Shuffles the tiles around
+   */
   public void scramble() {
     shuffle();
     if (!isParityEven()) {
@@ -50,16 +53,26 @@ public class Frame {
 
   /**
    *
-   * @return
+   * @return returns tiles
    */
   public Tile[][] getTiles() {
     return tiles;
   }
 
+  /**
+   *
+   * @return returns a move every time a player clicks a tile
+   */
   public int getMoves() {
     return moves;
   }
 
+  /**
+   *
+   * @param row row variable indicates what row a tile is in.
+   * @param col column variable indicates what column a tile is in.
+   * @return returns the new location of a tile
+   */
   public boolean move(int row, int col) {
     return move(row, col, row - 1, col)
         || move(row, col, row, col + 1)

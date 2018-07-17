@@ -15,6 +15,9 @@ import edu.cnm.deepdive.tileslide.R;
 import edu.cnm.deepdive.tileslide.model.Frame;
 import edu.cnm.deepdive.tileslide.model.Tile;
 
+/**
+ * FrameAdapter class makes up the frame of the game. It consist of the slicing method.
+ */
 public class FrameAdapter extends ArrayAdapter<Tile> {
 
   private int size;
@@ -23,6 +26,11 @@ public class FrameAdapter extends ArrayAdapter<Tile> {
   private Frame frame;
   private Tile[] tiles;
 
+  /**
+   *
+   * @param context creating context.
+   * @param frame creating the frame of the game.
+   */
   public FrameAdapter(@NonNull Context context, @NonNull Frame frame) {
     super(context, R.layout.tile_item);
     this.frame = frame;
