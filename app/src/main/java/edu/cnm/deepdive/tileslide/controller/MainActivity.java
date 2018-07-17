@@ -2,6 +2,7 @@ package edu.cnm.deepdive.tileslide.controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
   private static int PUZZLE_SIZE = 4;
+
 
   private Frame frame;
   private FrameAdapter adapter;
